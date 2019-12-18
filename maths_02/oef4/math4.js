@@ -1,3 +1,5 @@
+(function() {
+
 document.getElementById("run").addEventListener("click", function(){
 
 // de inhoud van het invulveld ophalen
@@ -13,3 +15,5 @@ document.getElementById("run").addEventListener("click", function(){
     //var x = res.toString();
     document.getElementById("numbers").value=res;
 });
+
+})();

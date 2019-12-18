@@ -1,4 +1,4 @@
-
+(function() {
 
 var pluske = document.getElementById("addition").innerText;
 var minneke=document.getElementById("substraction").innerText;
@@ -53,4 +53,5 @@ document.getElementById("substraction").addEventListener("click", function(){
 document.getElementById("division").addEventListener("click", function(){
     rekenen(delen);
 });
+})();
 

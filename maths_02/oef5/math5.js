@@ -1,6 +1,7 @@
 
 // de opdracht: When you click the button, get the number in the input, and show its factorial.
 // factorial gegoogled en dat is voor 5: 5!=5x4x3x2x1=120
+(function() {
 
 document.getElementById("run").addEventListener("click", function(){
 
@@ -18,6 +19,6 @@ document.getElementById("run").addEventListener("click", function(){
 document.getElementById("som").innerHTML="The result is: "+getal;
 });
 
-
+})();
 
 
