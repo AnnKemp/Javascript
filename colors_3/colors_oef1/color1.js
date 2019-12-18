@@ -12,7 +12,9 @@
 document.getElementById("myBtn").addEventListener("click", function(){
     document.getElementById("demo").innerHTML = "Hello World";
 }); */
+(function() {
 
+}
 document.getElementById("red").addEventListener("click", function() {
     document.body.style.backgroundColor = "red";
 });
@@ -25,3 +27,5 @@ document.getElementById("yellow").addEventListener("click", function() {
 document.getElementById("blue").addEventListener("click", function() {
     document.body.style.backgroundColor = "blue";
 });
+
+})();

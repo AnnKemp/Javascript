@@ -1,4 +1,4 @@
-
+(function() {
 
 document.getElementById("run").addEventListener("click", function(){
 
@@ -9,3 +9,4 @@ document.getElementById("run").addEventListener("click", function(){
     document.body.style.backgroundColor = achtergrondkleur;
 });
 
+})();
