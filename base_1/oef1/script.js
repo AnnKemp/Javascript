@@ -1,2 +1,6 @@
-var dag="Hello, World!";
-alert(dag);
+(function() {
+
+    var dag="Hello, World!";
+    alert(dag);
+
+})();

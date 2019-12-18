@@ -1,3 +1,5 @@
+
+
 (function myFunction() {
         var txt;
         if (confirm("Do you want cake?")) {
