@@ -19,6 +19,8 @@
     yes or no, there is an <em>apple</em> in the array <strong>fruits</str */
     // your code here
 
+        // zie https://www.w3schools.com/jsref/jsref_find.asp
+
         var result;
 // moet nog uitzoeken hoe het met die fruit-waarde zit die moet worden doorgegeven . . .
         function checkApple(fruit) {
