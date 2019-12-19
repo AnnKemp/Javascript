@@ -6,8 +6,7 @@
  * started at 26/10/2018
  */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
+//On the click to the button, get the birthdate of the visitor and display his/her age
 
 (function() {
     document.getElementById("run").addEventListener("click", function() {
@@ -25,6 +24,15 @@
     var dobMonth=document.getElementById("dob-month").value;
     var dobYear=document.getElementById("dob-year").value;
     //alert(dobDay+"-"+dobMonth+"-"+dobYear);
+
+        var ageYear=jaar-dobYear;
+        // nog testen op maand en dag, dat kan nog een verschil geven van een jaar dat moet ik nog maken
+
+        // de leeftijd in een aparte paragraaf aan de pagina toekennen
+        var node = document.createElement("p");
+        var textnode = document.createTextNode("Your age is: "+ageYear);
+        node.appendChild(textnode);
+      document.getElementsByClassName("explain")[0].appendChild(node);
 
     });
 
