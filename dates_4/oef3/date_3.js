@@ -1,10 +1,3 @@
-/* becode/javascript
- *
- * /04-dates/03-age-by-select/script.js - 4.3: calculateur d'âge
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
 
 //On the click to the button, get the birthdate of the visitor and display his/her age
 
@@ -26,24 +19,24 @@
     //alert(dobDay+"-"+dobMonth+"-"+dobYear);
 
         var ageYear=jaar-dobYear;
-        alert(ageYear);
-        parseInt(ageYear);
-        var trueAge;
+        // alert(ageYear);
+           parseInt(ageYear);
+        var leeftijd;
 
-        // hieronder zit nog ergens een fout . . .
-        // nog testen
-      /*  if(maand<(parseInt(dobMonth))){
-            trueAge=ageYear-1;
-        }else if(dag<(parseInt(dobDay))){
-            trueAge=ageYear-1;
+        // hieronder, in deze if else block zit nog ergens een fout . . .
+        // nog verder testen . . .
+      if(maand<=(parseInt(dobMonth))){
+            leeftijd=ageYear-1;
+        }else if(dag<=(parseInt(dobDay))){
+            leeftijd=ageYear-1;
         }else if((maand == (parseInt(dobMonth)))&&(dag == (parseInt(dobDay)))){
             alert("Hip, hip, hoeray! Happy Birthday!");
-            trueAge=ageYear;
-        }*/
+            leeftijd=ageYear;
+        }
 
         // de leeftijd in een aparte paragraaf aan de pagina toekennen
         var node = document.createElement("p");
-        var textnode = document.createTextNode("Your age is: "+trueAge);
+        var textnode = document.createTextNode("Your age is: "+leeftijd);
         node.appendChild(textnode);
       document.getElementsByClassName("explain")[0].appendChild(node);
 
