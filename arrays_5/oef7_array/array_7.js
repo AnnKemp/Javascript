@@ -1,4 +1,7 @@
 (function() {
+/* When you click the button, create a new array from the array <strong>people</strong>,
+    containing only the people whose <em>age is more than 18 years</em>. Display the resulting array in
+    the console.*/
 
     var people = [
         {
