@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+    var datum = new Date();
+
+// display todays day of the week.
+    //var dag = datum.getDay();
+
+    var dag = datum.getUTCDate();
+
+    //Note: 0=January, 1=February etc.
+    var maand=(datum.getMonth())+1;
+
+    var jaar=datum.getFullYear();
+    alert(dag+"-"+maand+"-"+jaar);
+
 
 })();
