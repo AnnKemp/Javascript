@@ -13,17 +13,11 @@
 
     var datum = new Date();
 
-// display todays day of the week.
-    //var dag = datum.getDay();
+    // gevraagd: Sunday 28 October 2018, 23h32
 
-    var dag = datum.getUTCDate();
-
-    //Note: 0=January, 1=February etc.
-    var maand=(datum.getMonth())+1;
-
-    var jaar=datum.getFullYear();
-    var geheel=dag+"-"+maand+"-"+jaar;
-    alert(dag+"-"+maand+"-"+jaar);
+    var geheelDatum = datum.toDateString();
+    var tijd = datum.toLocaleTimeString();
+    var geheel=geheelDatum+", "+tijd;
 
    document.getElementById("target").innerHTML = geheel;
 
