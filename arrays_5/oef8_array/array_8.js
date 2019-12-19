@@ -20,27 +20,15 @@
     // your code here
 
         var result;
+// moet nog uitzoeken hoe het met die fruit-waarde zit die moet worden doorgegeven . . .
+        function checkApple(fruit) {
 
-        fruits.forEach(myFunction);
-
-        function myFunction(item, index) {
-
-        if(item=="apple"){
-            result="yes";
+        if(fruit == "apple"){
+           return result="yes";
         }else{
-            result="no";
+           return result="no";
         }
-
-        console.log(result);
-        }
-        var ages = [3, 10, 18, 20];
-
-        function checkAdult(age) {
-            return age >= 18;
-        }
-
-        function myFunction() {
-            document.getElementById("demo").innerHTML = ages.find(checkAdult);
+        console.log(fruits.find(checkApple));
         }
 });
 })();
