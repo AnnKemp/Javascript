@@ -21,6 +21,7 @@
         var uur = datum.getHours();
         var minuten=datum.getMinutes();
         var tijd=uur+"."+minuten;
+        //alert(tijd);
 
         if(tijd >= 17.30) {
 
@@ -34,4 +35,3 @@
 
 
 })();
-© 2019 GitHub, Inc.
