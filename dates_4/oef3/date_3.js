@@ -28,6 +28,8 @@
         var ageYear=jaar-dobYear;
         var trueAge;
 
+        // nu nog testen op maand en dag . . .
+        // misschien nog omzetten naar integers, eerst nog testen
         if(maand<dobMonth){
             trueAge=ageYear-1;
         }else if(dag<dobDay){
@@ -36,8 +38,6 @@
             alert("Hip, hip, hoeray! Happy Birthday!");
             trueAge=ageYear;
         }
-
-        // nog testen op maand en dag, dat kan nog een verschil geven van een jaar dat moet ik nog maken
 
         // de leeftijd in een aparte paragraaf aan de pagina toekennen
         var node = document.createElement("p");
