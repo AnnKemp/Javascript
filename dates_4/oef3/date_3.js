@@ -10,19 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+    document.getElementById("run").addEventListener("click", function() {
+
 
     var datum = new Date();
-
-// display todays day of the week.
-    //var dag = datum.getDay();
-
     var dag = datum.getUTCDate();
-
     //Note: 0=January, 1=February etc.
     var maand=(datum.getMonth())+1;
-
     var jaar=datum.getFullYear();
-    alert(dag+"-"+maand+"-"+jaar);
+    //alert(dag+"-"+maand+"-"+jaar);
 
+    //waarden uit de select halen om de users geboortedatum te weten te komen
+    var dobDay=document.getElementById("dob-day").value;
+    var dobMonth=document.getElementById("dob-month").value;
+    var dobYear=document.getElementById("dob-year").value;
+    //alert(dobDay+"-"+dobMonth+"-"+dobYear);
+
+    });
 
 })();
