@@ -11,9 +11,27 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+
+        //if it's before 17h30
+        var day="Hello";
+        var evening="Good evening";
+
+        var datum = new Date();
+        var uur = datum.getHours();
+        var minuten=datum.getMinutes();
+        var tijd=uur+"."+minuten;
+
+        if(tijd >= 17.30) {
+
+            document.getElementsByTagName("p")[1].innerHTML = evening;
+
+        }else{
+            document.getElementsByTagName("p")[1].innerHTML = day;
+
+        }
+
+
 
 })();
 © 2019 GitHub, Inc.
