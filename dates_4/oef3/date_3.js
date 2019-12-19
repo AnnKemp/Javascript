@@ -26,18 +26,20 @@
     //alert(dobDay+"-"+dobMonth+"-"+dobYear);
 
         var ageYear=jaar-dobYear;
+        alert(ageYear);
+        parseInt(ageYear);
         var trueAge;
 
-        // nu nog testen op maand en dag . . .
-        // misschien nog omzetten naar integers, eerst nog testen
-        if(maand<dobMonth){
+        // hieronder zit nog ergens een fout . . .
+        // nog testen
+      /*  if(maand<(parseInt(dobMonth))){
             trueAge=ageYear-1;
-        }else if(dag<dobDay){
+        }else if(dag<(parseInt(dobDay))){
             trueAge=ageYear-1;
-        }else if((maand == dobMonth)&&(dag == dobDay)){
+        }else if((maand == (parseInt(dobMonth)))&&(dag == (parseInt(dobDay)))){
             alert("Hip, hip, hoeray! Happy Birthday!");
             trueAge=ageYear;
-        }
+        }*/
 
         // de leeftijd in een aparte paragraaf aan de pagina toekennen
         var node = document.createElement("p");
