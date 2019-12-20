@@ -1,7 +1,13 @@
 (function() {
     document.getElementById("run").addEventListener("click", function() {
 
-        var numberss=[1,4,3,2,9,6,10,8,5,7]; // de array aanmaken
+        var numberss=[];
+        // een array aanmaken met random numbers tussen 1 en 100
+        for(i=0;i<=10;i++) {
+            numberss[i]=Math.round((Math.random()) * 100);
+        }
+        //var numberss=[1,4,3,2,9,6,10,8,5,7]; // een statische array aanmaken met vaste waarden kan ook maar is minder leuk
+
         var sumOfNumbers=0;                  // variabelen initialiseren
         var AverageNumber=0;                 // variabelen initialiseren
 
