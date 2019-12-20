@@ -1,7 +1,9 @@
 (function() {
-/* When you click the button, create a new array from the array <strong>people</strong>,
-    containing only the people whose <em>age is more than 18 years</em>. Display the resulting array in
-    the console.*/
+
+    //https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/JavaScript_Introduction.html
+
+    document.getElementById("run").addEventListener("click", function() {
+
 
     var people = [
         {
@@ -80,6 +82,18 @@
             age: 81,
         },
     ];
+        /* When you click the button, create a new array from the array <strong>people</strong>,
+            containing only the people whose <em>age is more than 18 years</em>. Display the resulting array in
+            the console.*/
+
+        people.forEach(myFunction);
+
+        function myFunction(item, index) {
+
+            if(18 >= item.age){
+                console.log(item, index);
+            }
+        }
 
     // yo.filter(callback): return a new array, containing the items for which callback returned true. For example,
     // var fruits = ['apple', 'orange', 'banana'];
@@ -93,4 +107,5 @@
     //       // processing item: banana
     //       // ["apple", "orange"]ur code here
 
+    });
 })();
