@@ -93,8 +93,12 @@
             var person="My firstname is Jean and my lastname is Dupont, my email is "+mail+" and the index is "+numm;
         }
         console.log(person);
-        console.log(item, index);
     }
+        people.forEach(thisFunction);
+
+        function thisFunction(item, index) {
+            console.log(item, index);
+        }
 });
 
 })();
