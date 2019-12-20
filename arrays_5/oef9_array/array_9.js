@@ -1,11 +1,11 @@
 (function() {
     document.getElementById("run").addEventListener("click", function() {
 
-        var numberss=[1,4,3,2,9,6,10,8,5,7];
-        var sumOfNumbers=0;
-        var AverageNumber=0;
+        var numberss=[1,4,3,2,9,6,10,8,5,7]; // de array aanmaken
+        var sumOfNumbers=0;                  // variabelen initialiseren
+        var AverageNumber=0;                 // variabelen initialiseren
 
-        numberss.sort(function(a, b){return a - b});
+        numberss.sort(function(a, b){return a - b});     // de nummers sorteren van klein naar groot
 
         var smallestNumber=numberss[0];
         var biggestNumber=numberss[9];
@@ -19,10 +19,12 @@
 
            sumOfNumbers+=numberss[i];
            document.getElementById("sum").innerText=sumOfNumbers;
+
+           // even het gemiddelde berekenen
            AverageNumber=(sumOfNumbers/10);
            document.getElementById("average").innerText=AverageNumber;
        }
 // Nu werkt het prima. Maar wat ik niet begrijp is waarom ik de drie regels onder :sumOfNumbers+=numberss[i];
-// niet buiten de for lus kan zetten en waarom ze dan niet meer werken. Een for-lus heeft toch geen scope zoals een functie?!
+// niet buiten de for-lus kan zetten omdat ze dan niet meer werken. Een for-lus heeft toch geen scope zoals een functie?!
 });
 })();
