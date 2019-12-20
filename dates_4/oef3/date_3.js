@@ -27,17 +27,15 @@
         parseInt(jaar);
         var leeftijd;
 
-   if (maand<dobMonth){
+// dus als de maand kleiner is of de maand gelijk maar de dag kleiner
+   if ((maand < dobMonth)||((maand == dobMonth) && (dag < dobDay))){
             leeftijd=ageYear-1;
-        } else if (dag < dobDay){
-            leeftijd=(ageYear-1);
-        } else if((maand == dobMonth)&&(dag == dobDay)){
+        }else if((maand == dobMonth)&&(dag == dobDay)){
            alert("Hip, hip, hoeray! Happy Birthday!");
             leeftijd=ageYear;
         }else{
        leeftijd=ageYear;
    }
-
         // de leeftijd in een aparte paragraaf aan de pagina toekennen
         var node = document.createElement("p");
         var textnode = document.createTextNode("Your age is: "+leeftijd);
