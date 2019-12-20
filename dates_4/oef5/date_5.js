@@ -4,26 +4,20 @@
 
 document.getElementById("run").addEventListener("click", function() {
 
-   var jaar=document.getElementById("year").value;
+   var currentyear=document.getElementById("year").value;
+
+    function numberOfFridaythe13thsIn(year){
+        for(i=0;i<=11;i++){
+            var d = new Date(year, i, 13);
+            if(d.getDay() == 5) {
+             const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct","nov","dec"];
+                alert(monthNames[i]);
+            }
 
 
-
-
-    const birthday = new Date('August 19, 1975 23:15:30');
-    const day1 = birthday.getDay();
-// vrijdag : 5
-
-    console.log(day1);
-// expected output: 2
-    const event = new Date(Date.UTC(jaar));
-
-    //const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
-  const options = { year: 'numeric' };
-
-    console.log(event.toLocaleDateString('en-EN', options));
-// expected output: Donnerstag, 20. Dezember 2012 */
-
+        }
+    }
+         console.log(numberOfFridaythe13thsIn(currentyear));
 });
 
 })();
