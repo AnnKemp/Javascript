@@ -1,32 +1,28 @@
 (function() {
     document.getElementById("run").addEventListener("click", function() {
 
-        var numberss=[1,2,3,4,5,6,7,8,9,10];
+        var numberss=[1,4,3,2,9,6,10,8,5,7];
         var sumOfNumbers=0;
+        var AverageNumber=0;
+
+        numberss.sort(function(a, b){return a - b});
+
+        var smallestNumber=numberss[0];
+        var biggestNumber=numberss[9];
+
+        document.getElementById("min").innerText=smallestNumber;
+        document.getElementById("max").innerText=biggestNumber;
 
        for(i=0;i<=numberss.length;i++) {
            var list = document.getElementsByTagName("tr")[0];
            list.getElementsByTagName("td")[i].innerHTML = numberss[i];
 
-            sumOfNumbers+=numberss[i];
-            document.getElementById("sum").innerText=sumOfNumbers;
+           sumOfNumbers+=numberss[i];
+           document.getElementById("sum").innerText=sumOfNumbers;
+           AverageNumber=(sumOfNumbers/10);
+           document.getElementById("average").innerText=AverageNumber;
        }
-
-       alert(numberss);
-      var sorted_Array=numberss.sort(function(a, b){return a - b});
-        alert(sorted_Array);
-
-        var smallestNumber=sorted_Array[0];
-        var biggestNumber=sorted_Array[9];
-        var AverageNumber="nog niets";
-
-        document.getElementById("min").innerText=smallestNumber;
-        document.getElementById("max").innerText=biggestNumber;
-        document.getElementById("average").innerText=AverageNumber;
-
-    /*<p>When you click the button, display the ten elements of an array of
-        10 numbers (between 1 and 100) in the table. Then display in the definition list:
-            the smallest number, the biggest number, the sum of all numbers, and their average.</p>*/
-        //}
+// Nu werkt het prima. Maar wat ik niet begrijp is waarom ik de drie regels onder :sumOfNumbers+=numberss[i];
+// niet buiten de for lus kan zetten en waarom ze dan niet meer werken. Een for-lus heeft toch geen scope zoals een functie?!
 });
 })();
