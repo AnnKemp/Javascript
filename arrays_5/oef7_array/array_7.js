@@ -90,8 +90,8 @@
 
         function myFunction(item, index) {
 
-            if(18 >= item.age){
-                console.log(item, index);
+            if(18 <= item.age){
+                console.log(item);
             }
         }
 
