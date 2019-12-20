@@ -89,9 +89,11 @@
 
         if(("Jean" == item.firstname)&&("Dupont" == item.lastname)){
             var mail=item.email;
-            var person="My firstname is Jean and my lastname is Dupont, my email is "+mail;
+            var numm=index;
+            var person="My firstname is Jean and my lastname is Dupont, my email is "+mail+" and the index is "+numm;
         }
         console.log(person);
+        console.log(item, index);
     }
 });
 
