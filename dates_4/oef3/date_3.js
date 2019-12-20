@@ -19,20 +19,24 @@
     //alert(dobDay+"-"+dobMonth+"-"+dobYear);
 
         var ageYear=jaar-dobYear;
-        // alert(ageYear);
-           parseInt(ageYear);
+        parseInt(ageYear);
+        parseInt(dobMonth);
+        parseInt(dobDay);
+        parseInt(dag);
+        parseInt(maand);
+        parseInt(jaar);
         var leeftijd;
 
-        // hieronder, in deze if else block zit nog ergens een fout . . .
-        // nog verder testen . . .
-      if(maand<=(parseInt(dobMonth))){
+   if (maand<dobMonth){
             leeftijd=ageYear-1;
-        }else if(dag<=(parseInt(dobDay))){
-            leeftijd=ageYear-1;
-        }else if((maand == (parseInt(dobMonth)))&&(dag == (parseInt(dobDay)))){
-            alert("Hip, hip, hoeray! Happy Birthday!");
+        } else if (dag < dobDay){
+            leeftijd=(ageYear-1);
+        } else if((maand == dobMonth)&&(dag == dobDay)){
+           alert("Hip, hip, hoeray! Happy Birthday!");
             leeftijd=ageYear;
-        }
+        }else{
+       leeftijd=ageYear;
+   }
 
         // de leeftijd in een aparte paragraaf aan de pagina toekennen
         var node = document.createElement("p");
