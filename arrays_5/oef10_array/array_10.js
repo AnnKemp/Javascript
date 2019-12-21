@@ -79,10 +79,11 @@
             age: 81,
         },
     ];
-//<p>When you click the button, display (in the console ) the total of the persons' ages in the array
-   // <strong>people</strong>. Use the <em>reduce method</em>.</p>
+//When you click the button, display (in the console ) the total of the persons' ages in the array
+   //people. Use the <em>reduce method</em>.
 
-        var sumOfNumbers=0;
+// Dit was een eerste mogelijkheid, die werkt maar die gebruikt natuurlijk niet de reduce method
+       /* var sumOfNumbers=0;
 
         people.forEach(myFunction);
 
@@ -91,16 +92,27 @@
             sumOfNumbers+=item.age;
         }
 
-        console.log(sumOfNumbers);
+        console.log(sumOfNumbers);*/
 
-        /*
-        function getSum(total, leeftijd) {
-            return total + Math.round(num);
+//-------------------------------------------------einde van de eerste mogelijkheid----------------------------------------------------//
+//-----------------------------------------------de tweede mogelijkheid met de reduce-method-------------------------------------------//
+
+        //Eerst een eenvoudige array maken van de leeftijden
+        var sumOfNumbers=[];
+
+        people.forEach(myFunction);
+
+        function myFunction(item, index) {
+
+            sumOfNumbers[index]=item.age;
         }
+        // Twee dan de reduce method toepassen met een plusteken tussen total en num;
+        sumOfNumbers;
 
-        function myFunction(item) {
-            var resultaat = people.reduce(getSum, 0);
-            console.log(resultaat);
-        }*/
+        console.log(sumOfNumbers.reduce(myFunc));
+
+        function myFunc(total, num) {
+            return total + num;
+        }
 });
 })();
