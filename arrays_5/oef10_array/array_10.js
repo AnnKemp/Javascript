@@ -107,6 +107,7 @@
             sumOfNumbers[index]=item.age;
         }
         // Twee dan de reduce method toepassen met een plusteken tussen total en num;
+        // je kunt er dus ook mee aftrekken, vermenigvuldigen of delen ... en wie weet wat nog?!
         sumOfNumbers;
 
         console.log(sumOfNumbers.reduce(myFunc));
