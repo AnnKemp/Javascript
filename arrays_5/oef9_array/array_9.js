@@ -27,10 +27,8 @@
            document.getElementById("sum").innerText=sumOfNumbers;
 
            // even het gemiddelde berekenen
-           AverageNumber=(sumOfNumbers/10);
+           AverageNumber=(sumOfNumbers/10); // in geval van een onbekende lengte van de array zou je ook door array.length kunnen delen
            document.getElementById("average").innerText=AverageNumber;
        }
-// Nu werkt het prima. Maar wat ik niet begrijp is waarom ik de drie regels onder :sumOfNumbers+=numberss[i];
-// niet buiten de for-lus kan zetten omdat ze dan niet meer werken. Een for-lus heeft toch geen scope zoals een functie?!
-});
+    });
 })();
