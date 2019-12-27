@@ -1,15 +1,4 @@
-/*<section class="explain">
-    <p>When you click the button, change the source of the image to the next one listed in the
-<strong>gallery</strong> array.</p>
-</section>
-<section class="material">
-    <figure>
-    <img src="https://www.shutterstock.com/nl/image-vector/golden-metal-bell-red-bow-isolated-1237905265" alt="Carousel" />
-    </figure>
-    <div class="actions">
-    <button type="button" id="next">Next image</button>
-</div>
-</section>*/
+// I have changed the images to test the caroussel because the links were relative to... and not working
 
 (function() {
     var x=document.getElementsByTagName("img")[0];
@@ -18,28 +7,21 @@
     x.setAttribute("border", "5");
    // var imgSource=x.getAttributeNode("src").value;
 
-    var gallery= [
-        // en deze beelden doen het ook niet, ik moet deze even downloaden om te testen of het effectief werkt
-        "https://www.shutterstock.com/nl/image-vector/golden-metal-bell-red-bow-isolated-1237905265",
-        "https://www.shutterstock.com/nl/image-photo/black-clock-hanging-wall-546975487",
-        "https://www.shutterstock.com/nl/image-photo/vintage-compass-isolated-on-white-background-613586348",
-        "https://www.shutterstock.com/nl/image-vector/colored-world-map-borders-countries-roads-702945136",
-        "https://www.shutterstock.com/nl/image-photo/lemon-fruit-leaf-isolated-on-white-1028905405",
+    var gallery= [ // I have changed the images to test the caroussel because the links were relative to... and not working
+        "images/bell.webp",
+        "images/compass.webp",
+        "images/map.webp",
+        "images/lemon.webp",
+        "images/clock.webp",
     ];
+    var i=0;
 
     document.getElementById("next").addEventListener("click", function(){
+        i=i+1;
 
-        /* var gallery= [  // I have put the original code in comment because the links doesn't work and that's not practical to test the code
-             "../../_shared/img/bell.svg",
-             "../../_shared/img/clock.svg",
-             "../../_shared/img/compass.svg",
-             "../../_shared/img/lemon.svg",
-             "../../_shared/img/map.svg",
-         ]; */
-        var i=0;
-gallery[i]=i+1;
+       if(i>=gallery.length){
+         i=0;
+        }
         x.setAttribute("src", gallery[i]);
-
     });
-
 })();
