@@ -1,12 +1,13 @@
 
 (function() {
 
-document.getElementById("target").addEventListener("load", function(){
+window.addEventListener("load", function(){
 
     var txt=document.getElementById("target").innerText;
-    document.getElementById("target").innerText=0;
+    document.getElementById("target").innerText="";
+
     var i = 0;
-    var speed = 3000;
+    var speed = 50;
 
     function typeWriter() {
         if (i < txt.length) {
@@ -16,6 +17,13 @@ document.getElementById("target").addEventListener("load", function(){
         }
     }
 
-   // typeWriter();
+  typeWriter();
 });
 })();
+/* interessante code ook met de setTimeout functie: een venster openen en sluiten:
+
+var myWindow = window.open("", "", "width=200, height=100");
+myWindow.document.write("<p>This is 'myWindow'</p>");
+setTimeout(function(){ myWindow.close() }, 3000);
+
+ */
