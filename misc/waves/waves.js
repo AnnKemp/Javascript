@@ -1,19 +1,31 @@
+/*<p>Display some text inside the target element. Create a wave effect using at least 5 different font
+sizes.</p>*/
+
 (function() {
+    window.addEventListener("load", function(){
 
     var x=document.getElementById("target").innerText;
-   x.style.fontFamily="helvetica, sans-serif"; // de font family toekennen
-   x.style.color="#6666ff";
-        //x.style.fontSize ="44px";
+    document.getElementById("target").innerText="";
 
-// x in een array van letter en spaties splitsen via split("");
-    var res = x.split("");
-    var i;
-    let resultaat=0;
+    let el=document.getElementById("target");
 
-  for(i=0;i<res.length;i++) {
-        resultaat=res[i].style.fontSize=i+"px";
-   }
-    document.getElementById("target").innerText=resultaat;
+        var i = 0;
+        var speed = 50;
+
+function typeWriter() {
+   if (i<x.length) {
+
+       let letter=x.charAt(i);
+        el.style.fontSize=i+"px";
+
+        document.getElementById("target").innerText +=x.charAt(i);
+      // en dan length gedeeld door 4 en het omgedraaide om het wave-effect te bereiken
+     // document.getElementById("target").innerText+=x.charCodeAt(i).style.fontSize=i+"px";
+            i++;
+            setTimeout(typeWriter, speed);
+        } }
+    typeWriter();
+});
 })();
 // "wft" Style = "width:600px; filter:wave(add=0, freq=4, light=0, phase=0, strength=5)"  in css
 //<STYLE type=text/css>H1 {
