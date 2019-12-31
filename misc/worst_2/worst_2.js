@@ -5,6 +5,7 @@
     let v=0;
     let w=0;
     let result=[];
+
     document.getElementById("part-one").addEventListener("click", function(){
 
         if((x >= 460)&&(x <= 499)){
@@ -15,7 +16,6 @@
             for (const value of iterator) {
                 document.getElementById("target").innerHTML=result;
             }
-            return result;
         }
     });
     document.getElementById("part-two").addEventListener("click", function(){
@@ -28,7 +28,6 @@
             for (const value of iterator) {
                 document.getElementById("target").innerHTML=result;
             }
-            return result;
         }
     });
     document.getElementById("part-three").addEventListener("click", function(){
@@ -41,7 +40,6 @@
             for (const value of iterator) {
                 document.getElementById("target").innerHTML=result;
             }
-            return result;
         }
     });
     document.getElementById("part-four").addEventListener("click", function(){
@@ -52,13 +50,11 @@
 
             const iterator = result.values();
             for (const value of iterator) {
-               alert("result");
                 document.getElementById("target").innerHTML=result;
             }
-
-            return result;
-            //document.getElementById("target").innerHTML=w;
         }
     });
+
+    // krijg ik die stoemme komma's der af!?!
     //if(y< 10){ y="0"+y; } if(v< 10){ v="0"+v; } if(w< 10){ w="0"+w; } // nog een nul voorsteken als onder de tien
 })();
