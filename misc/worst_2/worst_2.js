@@ -11,7 +11,11 @@
             x+=1;
             result[0]=x;
 
-        //document.getElementById("target").innerHTML=result[0];
+            const iterator = result.values();
+            for (const value of iterator) {
+                document.getElementById("target").innerHTML=result;
+            }
+            return result;
         }
     });
     document.getElementById("part-two").addEventListener("click", function(){
@@ -19,27 +23,42 @@
         if((y >= 0)&&(y <= 99)){
             y+=1;
             result[1]=y;
-        document.getElementById("target").innerHTML=result[1];
+
+            const iterator = result.values();
+            for (const value of iterator) {
+                document.getElementById("target").innerHTML=result;
+            }
+            return result;
         }
     });
     document.getElementById("part-three").addEventListener("click", function(){
-       v+=1;
-        if((v >= 0)&&(v <= 99)){
-            document.getElementById("target").innerHTML=v;
-        }
 
+        if((v >= 0)&&(v <= 99)){
+            v+=1;
+            result[2]=v;
+
+            const iterator = result.values();
+            for (const value of iterator) {
+                document.getElementById("target").innerHTML=result;
+            }
+            return result;
+        }
     });
     document.getElementById("part-four").addEventListener("click", function(){
-        w+=1;
+
         if((w >= 0)&&(w <= 99)){
-            document.getElementById("target").innerHTML=w;
+            w+=1;
+            result[3]=w;
+
+            const iterator = result.values();
+            for (const value of iterator) {
+               alert("result");
+                document.getElementById("target").innerHTML=result;
+            }
+
+            return result;
+            //document.getElementById("target").innerHTML=w;
         }
-
     });
-    //let place=document.getElementById("target").innerHTML;
-   // place=x;
-    document.getElementById("target").innerHTML=result[0];
-    //if(y< 10){ y="0"+y; } if(v< 10){ v="0"+v; } if(w< 10){ w="0"+w; }
-
- // document.getElementById("target").innerHTML=x;
+    //if(y< 10){ y="0"+y; } if(v< 10){ v="0"+v; } if(w< 10){ w="0"+w; } // nog een nul voorsteken als onder de tien
 })();
