@@ -14,9 +14,8 @@ display it) when the page is reloaded.
     if (typeof(Storage) !== "undefined") {
 
         let storag = localStorage.getItem("teller");
-        // als het waarde paar teller=counter niet bestaand zou storag undefined moeten zijn, niet? Geen waarde aan een var geeft normaal gezien undefined, dit nog even checken
 
-        if (!storag) { // uitvissen hoe je moet checken of die leeg is (true or false) of zo ;;;; not true zou moeten werken ... nog eens extra checken
+        if (!storag){ // not true dus, zonder waarde dus . . . eventueel toch even checken
             let counter = 0;
             // item om data lokaal op te slaan aanmaken en vullen
             localStorage.setItem("teller", counter);
@@ -29,8 +28,6 @@ display it) when the page is reloaded.
             localStorage.setItem("teller", counter);
             // de stand tonen aan de user van de website
             document.getElementById("target").innerHTML = counter;
-
-
     }else {
         document.getElementById("target").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
