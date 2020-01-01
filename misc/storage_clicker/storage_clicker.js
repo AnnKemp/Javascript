@@ -23,16 +23,17 @@ display it) when the page is reloaded.
         } else {
             counter = localStorage.getItem("teller");
         }
-            parseInt(counter);
-            counter += 1;
+            parseInt(counter); // normaal zou ie hier  toch een getal van maken om dan hieronder op te tellen en dan te vertonen?! mmm da's voor morgen . . . iets maakt een string van dat getal...
+            counter+= 1;
         // item om data lokaal op te slaan/te vullen? nog even checken of dit de juiste verwoording is?!
             localStorage.setItem("teller", counter);
             // de stand tonen aan de user van de website
             document.getElementById("target").innerHTML = counter;
 
+
     }else {
         document.getElementById("target").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
-
+// ok eerst werkte de teller goed en het tonen in de pagina, nu heb ik de localstorage toegevoegd en getest, deze werkt nu goed maar nu doet de teller het weer niet meer goed in plaats van op te tellen concateneerd ie nu!
     });
 })();
