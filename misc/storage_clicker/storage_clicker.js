@@ -8,27 +8,31 @@ display it) when the page is reloaded.
 
 (function() {
 
-document.window("load", function(){
-    // 1) checken of local storage door de browser ondersteund wordt
+    document.getElementById("increment").addEventListener("click", function () {
 
+        // 1) checken of local storage door de browser ondersteund wordt
     if (typeof(Storage) !== "undefined") {
-        // window on load => inladen van gegevens
-        let storag = localStorage.getItem("teller");
 
-        if (storag == "") { // uitvissen hoe je moet checken of die leeg is (true or false) of zo ;;;;
+        let storag = localStorage.getItem("teller");
+        // als het waarde paar teller=counter niet bestaand zou storag undefined moeten zijn, niet? Geen waarde aan een var geeft normaal gezien undefined, dit nog even checken
+
+        if (!storag) { // uitvissen hoe je moet checken of die leeg is (true or false) of zo ;;;; not true zou moeten werken ... nog eens extra checken
             let counter = 0;
+            // item om data lokaal op te slaan aanmaken en vullen
+            localStorage.setItem("teller", counter);
         } else {
             counter = localStorage.getItem("teller");
         }
-        document.getElementById("increment").addEventListener("click", function () {
+            parseInt(counter);
             counter += 1;
-            // item om data lokaal op te slaan aanmaken en vullen
+        // item om data lokaal op te slaan/te vullen? nog even checken of dit de juiste verwoording is?!
             localStorage.setItem("teller", counter);
             // de stand tonen aan de user van de website
             document.getElementById("target").innerHTML = counter;
-        });
+
     }else {
         document.getElementById("target").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
+
     });
 })();
