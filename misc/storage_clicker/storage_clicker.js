@@ -17,7 +17,7 @@ display it) when the page is reloaded.
 
         if (storag){
             counter = localStorage.getItem("teller"); // ok deze onthoud wél maar voor hoelang zou oneindig moeten zijn maar lijkt me toch niet zo . . .
-            //alert(counter);   // om te testen of ie wel effectief iets opslaat
+            //alert(counter);
         } else {
             let counter = 0;
             // item om data lokaal op te slaan aanmaken en vullen
@@ -25,7 +25,7 @@ display it) when the page is reloaded.
         }
             parseInt(counter); // normaal zou ie hier  toch een getal van maken om dan hieronder op te tellen en dan te vertonen?! mmm da's voor morgen . . . iets maakt een string van dat getal...
             counter+= 1;
-        // item om data lokaal op te slaan/te vullen? nog even checken of dit de juiste verwoording is?!
+        // item om data lokaal op te slaan/te vullen? nog even checken of dit de juiste verwoording is?!  en hoe zit dat met die read-only?!!!???
             localStorage.setItem("teller", counter);
             // de stand tonen aan de user van de website
             document.getElementById("target").innerHTML = counter;
@@ -33,6 +33,5 @@ display it) when the page is reloaded.
         document.getElementById("target").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
 // ok eerst werkte de teller goed en het tonen in de pagina, nu heb ik de localstorage toegevoegd en getest, deze werkt nu goed maar nu doet de teller het weer niet meer goed in plaats van op te tellen concateneerd ie nu!
- //https://www.w3schools.com/jsref/prop_win_localstorage.asp    // heeft misschien iets te maken met die read-only
     });
 })();
