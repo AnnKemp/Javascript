@@ -20,7 +20,7 @@
                 scale: [0, 1],
                 duration: 1500,
                 elasticity: 600,
-                delay: (el, i) => 45 * (i+1)  // dit is een method
+                delay: (el, i) => 45 * (i+1)  // this is a method
             }).add({
             targets: '.m19',
             opacity: 0,
