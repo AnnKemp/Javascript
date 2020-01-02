@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <title>BeCode/JavaScript - 7.1: waving text</title>
@@ -10,23 +9,37 @@
     <link rel="stylesheet" href="../../_shared/css/styles.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <style>
+        .m19 {
+            position: relative;
+            font-weight: 200;
+            font-size: 4em;
+        }
+      .m19 .material {
+            position: relative;
+            display: inline-block;
+            padding-top: 0.2em;
+            padding-right: 0.05em;
+            padding-bottom: 0.1em;
+            overflow: hidden;
+        }
         body{
             background: -webkit-linear-gradient(turquoise, darkblue);
             background-image: linear-gradient(turquoise , darkblue);
         }
-   #target{
+        .m19  #target{
        font-family: 'Playfair Display', serif;
        color:white;
-       text-shadow: 2px 2px 4px teal;
+       text-shadow: 2px 2px 4px midnightblue;
+       transform-origin: 50% 100%;
+       display: inline-block;
+       line-height: 1em;
    }
-
     </style>
+
 </head>
 
 <body>
-<audio autoplay id="sound">
-    <source src="waves.mp3" type="audio/mpeg" />
-</audio>
+
 <div class="container">
     <header>
         <h1>BeCode / JavaScript</h1>
@@ -40,12 +53,14 @@
             <p>Display some text inside the target element. Create a wave effect using at least 5 different font
                 sizes.</p>
         </section>
-        <section class="material">
+        <h1 class="m19">
+        <span class="material">
             <p id="target">Woo-hoo! I'm making waves! Wéééé! Oh ... I think I'm having seasickness ...</p>
-        </section>
+        </span>
+        </h1>
     </div>
 </div>
-
 <script src="waves.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </body>
 </html>
