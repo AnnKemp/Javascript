@@ -4,6 +4,8 @@ sizes.</p>*/
 (function() {
     window.addEventListener("load", function(){
 
+     document.getElementById("sound").autoplay;
+
     var x=document.getElementById("target").innerText;
     document.getElementById("target").innerText="";
 
@@ -17,6 +19,10 @@ function typeWriter() {
 
        let letter=x.charAt(i);
         el.style.fontSize=i+"px";
+        if(i==x.length/2){
+            let y=i-1;
+            el.style.fontSize=y+"px";
+        }
 
         document.getElementById("target").innerText +=x.charAt(i);
       // en dan length gedeeld door 4 en het omgedraaide om het wave-effect te bereiken

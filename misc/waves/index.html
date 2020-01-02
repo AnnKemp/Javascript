@@ -10,21 +10,23 @@
     <link rel="stylesheet" href="../../_shared/css/styles.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <style>
+        body{
+            background: -webkit-linear-gradient(turquoise, darkblue);
+            background-image: linear-gradient(turquoise , darkblue);
+        }
    #target{
        font-family: 'Playfair Display', serif;
-       /*font-size:30px;*/
-       background: -webkit-linear-gradient(turquoise, darkblue);
-       background-image: linear-gradient(to right, turquoise , darkblue);
-       background-clip: text;
-       color:darkblue;
-       /*-webkit-text-fill-color: transparent;*/
-      text-shadow: 2px 2px 4px teal;
+       color:white;
+       text-shadow: 2px 2px 4px teal;
    }
 
     </style>
 </head>
 
 <body>
+<audio autoplay id="sound">
+    <source src="waves.mp3" type="audio/mpeg" />
+</audio>
 <div class="container">
     <header>
         <h1>BeCode / JavaScript</h1>
