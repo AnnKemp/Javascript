@@ -3,13 +3,13 @@
     of numbers behaves as a slot machine in the casino. When you click a button, a random value is
     picked between the values specified by the <em>data-min</em> and <em>data-max</em> attributes.
         Display the number (with a leading 0) in the target paragraph.
-
 */
 
 let waarde=0;
 let knoppen=[];
 let speed = 50;
 let myVar;
+let result=[];
 
 function slotMachine(){
     waarde=Math.floor(Math.random() * 100); // math random number between 0 and 99
@@ -17,6 +17,8 @@ function slotMachine(){
 // put the value in the last three of the value fields
     for(i=1;i<=3;i++) {
         document.getElementsByTagName("input")[i].value = waarde;
+        result=document.getElementsByTagName("input")[i].value;
+        // hier die waarde opvangen om die dan weer te kunnen geven in het target gedeelte
     }
     myVar=setTimeout(slotMachine, speed);
 }
@@ -28,7 +30,7 @@ function slotMachine(){
     function myStopFunction(e) {
         alert("de "+e.id+"werkt!");
         //clearTimeout(myVar);
-    <p id="target">+460000000</p>
+        document.getElementById("target").innerHTML="+0"+"<span>"+result[0]+"</span>"+"<span>"+result[1]+"</span"+"<span>"+result[2]+"</span>"+"<span>"+result[3]+"</span>";
     }
 //--------------------------------------------einde function stop slotMachine----------------------------------------------------------
 
