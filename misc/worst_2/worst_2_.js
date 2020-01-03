@@ -4,9 +4,9 @@
     let y=0;
     let v=0;
     let w=0;
-    let a;
-    let b;
-    let c;
+    let a="00";
+    let b="00";
+    let c="00";
     /*function some_func(otherFunc, ev) {
         // magic happens
     }
@@ -21,7 +21,7 @@
             if ((x >= 460) && (x <= 499)) {
                 x += 1;
 
-     document.getElementById("target").innerHTML="+"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
+     document.getElementById("target").innerHTML="+0"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
 
             }
         }
@@ -33,7 +33,7 @@
                 }else{
                     a=y;
                 }
-   document.getElementById("target").innerHTML="+"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
+   document.getElementById("target").innerHTML="+0"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
             }
         }
          function functionDrie() {
@@ -44,7 +44,7 @@
                  }else{
                      b=y;
                  }
-   document.getElementById("target").innerHTML="+"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
+   document.getElementById("target").innerHTML="+0"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
              }
          }
             function functionVier() {
@@ -55,7 +55,7 @@
                     }else{
                         c=w;
                     }
-  document.getElementById("target").innerHTML="+"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
+  document.getElementById("target").innerHTML="+0"+"<span>"+x+"</span>"+"<span>"+a+"</span"+"<span>"+b+"</span>"+"<span>"+c+"</span";
                 }
             }
 })();
