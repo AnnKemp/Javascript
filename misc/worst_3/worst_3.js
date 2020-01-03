@@ -21,7 +21,6 @@ function slotMachine(){
 
         // hieronder het opvangen van de waarde om daarna in target te tonen
         result[i]=document.getElementsByTagName("input")[i].value;
-        // hier die waarde opvangen om die dan weer te kunnen geven in het target gedeelte
     }
     result[0]=waarde_2;
     document.getElementById("part-one").value=result[0];
@@ -35,23 +34,33 @@ function slotMachine(){
     slotMachine();  // aanroepen function slotmachine
 
 //-------------------------------------------------begin function stop slotMachine------------------------------------------------------------
-    function myStopFunction(e) {
-      //  alert("de "+e.id+"werkt!");
-        clearTimeout(myVar);
-        //e.id.clearTimeout(myVar); // zou ik zo de functie voor alleen die knop kunnen stilleggen?
-    }
-//--------------------------------------------einde function stop slotMachine----------------------------------------------------------
+  function myStopFunction(e) {
+      let idKnop;
+      idKnop=(e.id);
 
+        if(idKnop=="fix-part-one"){
+            // en dan zou ik de dingen voor alleen deze knop met deze functie moeten kunnen stil leggen maar dan moet ik wél mijn functie aanpassen
+           clearTimeout(myVar);
+
+         } else if (idKnop=="fix-part-two"){
+            clearTimeout(myVar);
+        }
+        else if (idKnop=="fix-part-three"){
+            clearTimeout(myVar);
+        }
+        else if (idKnop=="fix-part-four"){
+            clearTimeout(myVar);
+        }
+    }
+//--------------------------------------------einde function stop slotMachine-----------------------------------------------------------//
     knoppen=document.getElementsByTagName("button");
 
     for(y=0;y<=3;y++) {
         knoppen[y].addEventListener('click', function() {
-            myStopFunction(this);
+               myStopFunction(this);
         } , false);
     }
-    document.getElementById("fix-part-one").addEventListener("click", function(){
-        clearTimeout(myVar);
-    });
+   // this geeft ook de id van de knoppen door en dit kan dan weer gebruikt worden in de stop-functie
 })();
 
 /*
