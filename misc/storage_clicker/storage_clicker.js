@@ -27,6 +27,5 @@ display it) when the page is reloaded.
     }else {
         document.getElementById("target").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
-// ok eerst werkte de teller goed en het tonen in de pagina, nu heb ik de localstorage toegevoegd en getest, deze werkt nu goed maar nu doet de teller het weer niet meer goed in plaats van op te tellen concateneerd ie nu!
     });
 })();
