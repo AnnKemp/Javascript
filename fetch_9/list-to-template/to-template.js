@@ -24,26 +24,25 @@
             data.heroes.forEach(thisFunction);
 
                 function thisFunction(item, index) {
-                   // console.log(item, index);
+                    // console.log(item, index);
                     // Get <template> element
                     var itm = document.getElementById("tpl-hero");
-
 // Copy the <template element and its child nodes
                     var cln = itm.content.cloneNode(true);
-
 // Append the cloned <template> element to <ol> with id="target"
                     document.getElementById("target").appendChild(cln);
+                     alert(item.name+item.alterEgo+item.abilities); // dus met een alert geeft ie ze wél alle vijf dus de foreach werkt wél goed, dan worden wél de gegevens vertoont
 // nu nog de data toewijzen
+// dus hij maakt de vijf items aan, de vijf ol's, hij vult echter alleen de eerste en dan met de vijfde gegevens-set dus hij schiet door
+                    // hij maakt in de vijf ol's dus ook de html-structuur aan, dus alleen het opvullen is het probleem.
 
-                   // document.querySelector(".name")=item.name;
+                    document.querySelector(".name").innerHTML = item.name;
+                    document.querySelector(".alter-ego").innerHTML = item.alterEgo;
+                    document.querySelector(".powers").innerHTML = item.abilities;
+
                 }
-
-
-            //           tag.selector=hero.eigenschap;
-            // query selectors
-
         });
-        // het werkt ik snap er een beetje van . . .
+
     });
 })();
 
